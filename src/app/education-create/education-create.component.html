@@ -1,0 +1,35 @@
+<app-menu></app-menu>
+<div>
+  <div class="heading">
+    <span class="pageTitle">User Create</span>
+  </div>
+  <table class="table table-sm" *NgIf="student">
+    <tr>
+      <td>Id</td>
+      <td><input [(ngModel)]="student.id" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Firstname</td>
+      <td><input [(ngModel)]="student.firstname" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>Lastname</td>
+      <td><input [(ngModel)]="student.lastname" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>GPA</td>
+      <td><input [(ngModel)]="student.gpa" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>SAT</td>
+      <td><input [(ngModel)]="student.sat" class="inputstring" type="text"></td>
+    </tr>
+    <tr>
+      <td>InState</td>
+      <td><input [(ngModel)]="student.instate" class="inputstring" type="checkbox"></td>
+    </tr>
+  </table>
+  <div>
+  <span><button (click)="Save()" class="btn btn-primary">Save</button>| </span>
+  </div>
+</div>

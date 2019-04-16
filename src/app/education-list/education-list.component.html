@@ -1,0 +1,27 @@
+<app-menu></app-menu>
+<div>
+  <div class="heading">
+    <span class="pageTitle">User List</span>
+    <span class="create">|<a routerLink="/user/create">Create</a></span>
+  </div>
+  <table class="table table-sm">
+    <thead>
+      <td>Firstname</td>
+      <td>Lastname</td>
+      <td>SAT</td>
+      <td>GPA</td>
+      <td>In State?</td>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+          <td>{{student.firstname}}</td>
+          <td>{{student.lastname}}</td>
+          <td>{{student.sat}}</td>
+          <td>{{student.gpa}}</td>
+          <td class="bool">{{student.instate | booldisp}}</td>
+          <td><a routerLink="/user/detail/{{student.id}}">Detail</a> | 
+              <a routerLink="/user/edit/{{student.id}}">Edit</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
